@@ -1,15 +1,16 @@
 {
   "name": "Pro-shop Backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "About ProShop e-commerce website built with MERN & Redux Toolkit",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "author": "MFR Rayhan",
+  "license": "MIT",
+  "type": "module",
   "dependencies": {
     "cors": "^2.8.6",
     "crud": "^0.0.28",
