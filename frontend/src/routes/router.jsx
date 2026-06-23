@@ -3,11 +3,13 @@ import App from "../App";
 import HomePage from "../pages/HomePage";
 import Login from "../pages/Login";
 import ProductDetails from "../components/ProductDetails";
+import Loading from "../components/Loading";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    hydrateFallbackElement: <Loading />,
     children: [
       {
         index: true,

@@ -15,7 +15,7 @@ export default function Rating({ value = 0, text }) {
         </span>
       ))}
 
-      {text && <span className="ml-2 text-gray-600 text-sm">{text}</span>}
+      {text && <span className="badge badge-warning ml-2 text-sm">{text}</span>}
     </div>
   );
 }

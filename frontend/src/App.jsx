@@ -6,7 +6,9 @@ export default function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="py-10 container">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </>
   );

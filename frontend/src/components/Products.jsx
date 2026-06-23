@@ -19,30 +19,41 @@ export default function Products() {
     fetchProducts();
   }, []);
 
-  console.log(products);
-
   return (
     <section className="py-20">
-      <h2 className="text-4xl mb-10">Latest Products</h2>
+      <h2 className="section-title mb-10">Latest Products</h2>
 
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {products.map((product) => (
-          <div key={product._id} className="p-5 rounded-md shadow space-y-3">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="rounded-md"
-            />
+          <div
+            key={product._id}
+            className="rounded-md shadow overflow-hidden bg-base-100 hover:shadow-lg transition-shadow duration-300 "
+          >
             <Link to={`/product/${product._id}`}>
-              <h2 className="underline">{product.name}</h2>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-64 object-cover rounded-md p-4"
+              />
             </Link>
-            <Rating
-              value={product.rating}
-              text={`${product.numReviews} reviews`}
-            ></Rating>
-            <p className="text-xl font-semibold text-gray-500">
-              $ {product.price}
-            </p>
+
+            <div className="p-5 space-y-3">
+              <Link
+                to={`/product/${product._id}`}
+                className="hover:text-primary transition-colors"
+              >
+                <h3 className="font-semibold text-lg line-clamp-2 underline">
+                  {product.name}
+                </h3>
+              </Link>
+
+              <Rating
+                value={product.rating}
+                text={`${product.numReviews} reviews`}
+              />
+
+              <p className="text-xl font-bold text-primary">${product.price}</p>
+            </div>
           </div>
         ))}
       </div>
