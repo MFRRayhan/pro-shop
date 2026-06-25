@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",
     image: "/images/airpods.jpg",
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "2",
     name: "iPhone 13 Pro 256GB Memory",
     image: "/images/phone.jpg",
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: "3",
     name: "Cannon EOS 80D DSLR Camera",
     image: "/images/camera.jpg",
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "4",
     name: "Sony Playstation 5",
     image: "/images/playstation.jpg",
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "5",
     name: "Logitech G-Series Gaming Mouse",
     image: "/images/mouse.jpg",
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: "6",
     name: "Amazon Echo Dot 3rd Generation",
     image: "/images/alexa.jpg",
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "7",
     name: "Minimalist Oak Desk",
     image:
       "https://images.unsplash.com/photo-1683582411325-b87240c5b530?w=640&h=510&fit=crop&q=80",
@@ -92,7 +85,6 @@ const products = [
     numReviews: 38,
   },
   {
-    _id: "8",
     name: "Leather Heritage Backpack",
     image:
       "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=640&h=510&fit=crop&q=80",
@@ -106,7 +98,6 @@ const products = [
     numReviews: 89,
   },
   {
-    _id: "9",
     name: "Stainless Steel Water Bottle",
     image:
       "https://images.unsplash.com/photo-1530711654140-23ef9ad45094?w=640&h=510&fit=crop&q=80",
@@ -120,7 +111,6 @@ const products = [
     numReviews: 310,
   },
   {
-    _id: "10",
     name: "Pro Ceramic Espresso Machine",
     image:
       "https://images.unsplash.com/photo-1595928642581-f50f4f3453a5?w=640&h=510&fit=crop&q=80",
@@ -134,7 +124,6 @@ const products = [
     numReviews: 42,
   },
   {
-    _id: "11",
     name: "Smart Fitness Watch",
     image:
       "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=640&h=510&fit=crop&q=80",
@@ -148,7 +137,6 @@ const products = [
     numReviews: 154,
   },
   {
-    _id: "12",
     name: "Matte Black Ceramic Coffee Mug",
     image:
       "https://images.unsplash.com/photo-1478793923361-0a82106deaa3?w=640&h=510&fit=crop&q=80",
@@ -162,7 +150,6 @@ const products = [
     numReviews: 78,
   },
   {
-    _id: "13",
     name: "Natural Cork Yoga Mat",
     image:
       "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=640&h=510&fit=crop&q=80",
@@ -176,7 +163,6 @@ const products = [
     numReviews: 63,
   },
   {
-    _id: "14",
     name: "Wireless Charging Desk Pad",
     image:
       "https://images.unsplash.com/photo-1587749091716-f7b291a87f87?w=640&h=510&fit=crop&q=80",
@@ -190,7 +176,6 @@ const products = [
     numReviews: 81,
   },
   {
-    _id: "15",
     name: "Noise-Isolating Studio Microphone",
     image:
       "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=640&h=510&fit=crop&q=80",
@@ -204,7 +189,6 @@ const products = [
     numReviews: 99,
   },
   {
-    _id: "16",
     name: "Minimalist Leather Wallet",
     image:
       "https://images.unsplash.com/photo-1627123424574-724758594e93?w=640&h=510&fit=crop&q=80",
@@ -218,7 +202,6 @@ const products = [
     numReviews: 142,
   },
   {
-    _id: "17",
     name: "Portable Bluetooth Speaker",
     image:
       "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=640&h=510&fit=crop&q=80",
@@ -232,7 +215,6 @@ const products = [
     numReviews: 188,
   },
   {
-    _id: "18",
     name: "Soy Wax Amber Candle",
     image:
       "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=640&h=510&fit=crop&q=80",
@@ -246,7 +228,6 @@ const products = [
     numReviews: 75,
   },
   {
-    _id: "19",
     name: "Adjustable Dumbbell Set",
     image:
       "https://images.unsplash.com/photo-1638536532686-d610adfc8e5c?w=640&h=510&fit=crop&q=80",
@@ -260,7 +241,6 @@ const products = [
     numReviews: 52,
   },
   {
-    _id: "20",
     name: "Anodized Aluminum Mechanical Pencil",
     image:
       "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=640&h=510&fit=crop&q=80",
