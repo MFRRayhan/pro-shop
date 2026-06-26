@@ -1,8 +1,9 @@
 import express from "express";
 import dotenv from "dotenv";
-import products from "./data/products.js";
 import cors from "cors";
 import connectDB from "./config/db.js";
+import productRoutes from "./routes/productRoutes.js";
+import { errorHandler, notFound } from "./middleWare/errorMiddleware.js";
 
 dotenv.config();
 connectDB();
@@ -17,13 +18,10 @@ app.get("/", async (req, res) => {
   res.send("Pro-Shop server is running...");
 });
 
-app.get("/api/products", async (req, res) => {
-  res.json(products);
-});
+// PRODUCTS
+app.use("/api/products", productRoutes);
 
-app.get("/api/products/:id", async (req, res) => {
-  const product = products.find((product) => product._id === req.params.id);
-  res.json(product);
-});
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`Server running on ${port}`));

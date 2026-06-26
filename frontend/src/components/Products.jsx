@@ -19,6 +19,11 @@ export default function Products() {
     fetchProducts();
   }, []);
 
+  const truncateText = (text, limit = 25) => {
+    if (text.length <= 25) return text;
+    return text.slice(0, limit) + "...";
+  };
+
   return (
     <section className="py-20">
       <h2 className="section-title mb-10">Latest Products</h2>
@@ -42,8 +47,8 @@ export default function Products() {
                 to={`/product/${product._id}`}
                 className="hover:text-primary transition-colors"
               >
-                <h3 className="font-semibold text-lg line-clamp-2 underline">
-                  {product.name}
+                <h3 className="font-semibold text-lg line-clamp-2 underline text-ellipsis">
+                  {truncateText(product.name)}
                 </h3>
               </Link>
 
