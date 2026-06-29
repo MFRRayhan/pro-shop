@@ -32,21 +32,18 @@ export default function ProductDetails() {
   if (!product) return <h2>No Product Found</h2>;
 
   return (
-    <>
+    <div className="space-y-10">
+      <button onClick={() => navigate(-1)} className="btn btn-border-reveal">
+        <FaArrowLeft />
+        Go Back
+      </button>
+
       {isLoading ? (
         <Loading />
       ) : error ? (
         error?.data?.message || error?.error
       ) : (
-        <div className="space-y-10">
-          <button
-            onClick={() => navigate(-1)}
-            className="btn btn-border-reveal"
-          >
-            <FaArrowLeft />
-            Go Back
-          </button>
-
+        <>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Image */}
             <div className="lg:col-span-5">
@@ -162,8 +159,8 @@ export default function ProductDetails() {
               </fieldset>
             </form>
           </div>
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 }
