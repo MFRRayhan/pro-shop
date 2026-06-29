@@ -1,27 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
-import useAxios from "../hooks/useAxios";
-import { useQuery } from "@tanstack/react-query";
 import Loading from "./Loading";
 import Rating from "../components/Rating";
 import { FaArrowLeft } from "react-icons/fa";
 import { useGetProductDetailsQuery } from "../slices/productsApiSlice";
+import Message from "./Message";
 
 export default function ProductDetails() {
   const navigate = useNavigate();
   const { id: productId } = useParams();
-
-  // const axiosPublic = useAxios();
-  // const { data: product, isLoading } = useQuery({
-  //   queryKey: ["productDetails", productId],
-  //   queryFn: async () => {
-  //     const res = await axiosPublic.get(`api/products/${productId}`);
-  //     return res.data;
-  //   },
-  // });
-
-  // if (isLoading) {
-  //   return <Loading></Loading>;
-  // }
 
   const {
     data: product,
@@ -29,7 +15,9 @@ export default function ProductDetails() {
     error,
   } = useGetProductDetailsQuery(productId);
 
-  if (!product) return <h2>No Product Found</h2>;
+  console.log(error);
+
+  // if (!product) return <h2>No Product Found</h2>;
 
   return (
     <div className="space-y-10">
@@ -41,7 +29,9 @@ export default function ProductDetails() {
       {isLoading ? (
         <Loading />
       ) : error ? (
-        error?.data?.message || error?.error
+        <Message variant={"alert-error"}>
+          {error?.message || error?.error}
+        </Message>
       ) : (
         <>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">

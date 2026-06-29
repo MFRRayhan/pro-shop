@@ -2,23 +2,9 @@ import { Link } from "react-router-dom";
 import Rating from "./Rating";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
 import Loading from "./Loading";
+import Message from "./Message";
 
 export default function Products() {
-  // const [products, setProducts] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     try {
-  //       const { data } = await axios.get("http://localhost:4000/api/products");
-  //       setProducts(data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchProducts();
-  // }, []);
-
   const { data: products, isLoading, error } = useGetProductsQuery();
 
   const truncateText = (text, limit = 25) => {
@@ -31,7 +17,9 @@ export default function Products() {
       {isLoading ? (
         <Loading />
       ) : error ? (
-        error?.data?.message || error?.error
+        <Message variant={"alert-error"}>
+          error?.message || error?.error
+        </Message>
       ) : (
         <>
           <h2 className="section-title mb-10">Latest Products</h2>
