@@ -1,6 +1,6 @@
 export const BASE_URL =
   import.meta.env.VITE_NODE_ENV === "development"
-    ? "http://localhost:5173"
+    ? "http://localhost:4000"
     : "";
 export const PRODUCTS_URL = "/api/products";
 export const USERS_URL = "/api/users";
