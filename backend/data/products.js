@@ -248,7 +248,7 @@ const products = [
       "Precision engineered 0.5mm draftsperson mechanical pencil with a knurled grip and an indestructible lightweight aluminum body.",
     brand: "DraftLine",
     category: "Accessories",
-    price: 32.0,
+    price: 32.05,
     countInStock: 30,
     rating: 4.8,
     numReviews: 41,
